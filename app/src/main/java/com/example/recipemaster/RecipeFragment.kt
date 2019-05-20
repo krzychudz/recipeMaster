@@ -47,8 +47,8 @@ class RecipeFragment : Fragment(), SaveFileInterface {
 
 
     fun makeSnackBar(){
-        if(isLog) {
 
+        if(isLog) {
             snackBar = Snackbar.make(
                 activity!!.findViewById(android.R.id.content),
                 "", Snackbar.LENGTH_INDEFINITE
@@ -65,6 +65,7 @@ class RecipeFragment : Fragment(), SaveFileInterface {
             sl.addView(view,0)
 
             snackBar!!.show()
+
         }
     }
 

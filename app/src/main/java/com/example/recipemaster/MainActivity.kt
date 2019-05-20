@@ -12,6 +12,7 @@ import android.view.View
 
 import kotlinx.android.synthetic.main.activity_main.*
 import android.widget.Toast
+import com.example.recipemaster.View.ShoppingListActivity
 import com.facebook.*
 import com.facebook.login.LoginManager
 import com.facebook.login.LoginResult
@@ -98,6 +99,11 @@ class MainActivity : AppCompatActivity() {
             getDataFromApi()
         }
 
+        menu_list.setOnClickListener{
+            val intent = Intent(this, ShoppingListActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     fun setIsLog(b: Boolean){
@@ -164,8 +170,6 @@ class MainActivity : AppCompatActivity() {
 
                     val actionB = supportActionBar!!
                     actionB.setDisplayHomeAsUpEnabled(true)
-
-
 
                     RecipeFragment.arguments = args
 
